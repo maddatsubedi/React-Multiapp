@@ -1,0 +1,71 @@
+.calculator-main {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: darkslategray;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #e1d9d1;
+    border-radius: 20px;
+    /* width: 500px; */
+}
+
+.calculator .display {
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-family: "digital-7", sans-serif;
+    font-size: 2.8rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.calculator .display span {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: gray;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 50px);
+    background-color: lightslategray;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.calculator .buttons .span-two {
+    grid-row: span 2;
+}
+
+.calculator .buttons button {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0px 10px;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.calculator .buttons button:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 400px) {
+    .calculator .buttons button {
+        font-size: 1.1rem;
+    }
+}
