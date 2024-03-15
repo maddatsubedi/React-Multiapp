@@ -11,6 +11,7 @@
 }
 
 .calculator {
+    max-width: 500px;
     background-color: darkslategray;
     box-sizing: border-box;
     padding: 10px;
@@ -36,6 +37,7 @@
 }
 
 .calculator .display span {
+    padding-right: 10px;
     font-family: "Roboto", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
