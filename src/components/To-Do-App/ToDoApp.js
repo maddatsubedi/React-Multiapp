@@ -14,6 +14,7 @@ const ToDoApp = () => {
   const [description, setDescription] = useState('');
 
   const [editIndex, setEditIndex] = useState(null);
+  const [descAddMode, setDescAddMode] = useState(false);
   const titleEditRef = useRef(null); // Ref for title input
   const descriptionEditRef = useRef(null); // Ref for description input
 
@@ -58,9 +59,14 @@ const ToDoApp = () => {
                     <div className="title">
                       <input ref={titleEditRef} name='titleEdit' defaultValue={todo.title} className='titleEdit' type="text" required={true} />
                     </div>
-                    <div className="description">
-                      <input ref={descriptionEditRef} name='descriptionEdit' defaultValue={todo.description} className='descriptionEdit' type="text" required={true} />
-                    </div>
+                    {
+                      todo.description ?
+                        <div className="description">
+                          <input ref={descriptionEditRef} name='descriptionEdit' defaultValue={todo.description} className='descriptionEdit' type="text" required={true} />
+                        </div>
+                        :
+                        <></>
+                    }
                   </div>
                   <div className="todo-button">
                     <button type='submit' className='submit'><FaSave /></button>
@@ -73,9 +79,16 @@ const ToDoApp = () => {
                   <div className="title">
                     {todo.title}
                   </div>
-                  <div className="description">
-                    {todo.description}
-                  </div>
+                  {
+                    todo.description ?
+                      <div className="description">
+                        {
+                          todo.description
+                        }
+                      </div>
+                      :
+                      <></>
+                  }
                 </div>
                 <div className="todo-button">
                   <button className='edit' onClick={() => editHandler(index)}><FaEdit /></button>
@@ -147,7 +160,7 @@ const ToDoApp = () => {
     setEditIndex(null);
     const formData = new FormData(e.target);
     const titleEdit = formData.get('titleEdit');
-    const descriptionEdit = formData.get('descriptionEdit');
+    const descriptionEdit = formData.get('descriptionEdit') || "";
     setTodo((prevTodo) => {
       const newTodo = prevTodo.map((todo, indx) => {
         if (index === indx) {
@@ -185,22 +198,35 @@ const ToDoApp = () => {
     });
   }
 
+  const descAddModeHandler = () => {
+    setDescAddMode(true);
+  }
+
   return (
     <>
       <div className="to-do-main">
         <div className="to-do">
-          <form className="todo-input" onSubmit={(e) => submitHandler(e)}>
+          <form className={`descAddMode ${ descAddMode ? `descAddMode` : `` }`} onSubmit={(e) => submitHandler(e)}>
             <div className="input-field">
               <div className="title input-section">
-                <input type="text" className="titleInput" value={title} onChange={(e) => handleTitle(e)} required={true} />
+                <input type="text" className={`titleInput ${title !== '' ? `valid` : ''}`} value={title} onChange={(e) => handleTitle(e)} required={true} />
                 <span>Title</span>
                 <i></i>
               </div>
-              <div className="description input-section">
-                <input type="text" className="descInput" value={description} onChange={(e) => handleDescription(e)} required={true} />
-                <span>Description</span>
-                <i></i>
-              </div>
+              {
+                descAddMode ?
+                  <div className="description input-section">
+                    <input type="text" className={`descInput ${description !== '' ? `valid` : ''}`} value={description} onChange={(e) => handleDescription(e)} required={false} />
+                    <span>Description</span>
+                    <i></i>
+                  </div>
+                  :
+                  <>
+                  <div className="addDescButton" onClick={descAddModeHandler}>
+                    Add Description
+                  </div>
+                  </>
+              }
             </div>
             <div className="button">
               <button type='submit'>

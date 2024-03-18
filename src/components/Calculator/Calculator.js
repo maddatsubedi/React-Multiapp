@@ -85,7 +85,7 @@ const Calculator = () => {
       <div className="calculator-main">
         <div className="calculator">
           <div className="display">
-            <span>({result || 0})&nbsp;</span>
+            <span>({result || 0})</span>
             {operant || 0}
           </div>
           <div className="buttons">

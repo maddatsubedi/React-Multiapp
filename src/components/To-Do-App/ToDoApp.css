@@ -5,6 +5,8 @@
 
 .to-do {
     /* max-width: 90%; */
+    max-width: 1000px;
+    min-width: 500px;
     height: fit-content;
     padding: 40px 20px 20px 20px;
     background-color: lightgray;
@@ -15,17 +17,44 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    column-gap: 20px;
 }
 
 .to-do .todo-input .input-field {
+    width: 100%;
     display: flex;
     flex-direction: row;
     column-gap: 20px;
     /* width: 100%; */
 }
 
+.to-do .todo-input .input-field .input-section {
+    width: 100%;
+}
+
+.to-do .todo-input .input-field .addDescButton {
+    /* width: 91px; */
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.to-do .todo-input .input-field .addDescButton:hover {
+    background-color: rgb(73, 113, 153);
+}
+
 .to-do .todo-input input {
-    width: 250px;
+    width: 100%;
     height: 50px;
     position: relative;
     font-size: 1.05rem;
@@ -55,7 +84,7 @@
     transition: 0.5s;
 }
 
-.input-field input:valid~span,
+.input-field input.valid~span,
 .input-field input:focus~span {
     color: white;
     transform: translateX(0px) translateY(-40px);
@@ -76,7 +105,7 @@
     z-index: 1;
 }
 
-.input-field input:valid~i,
+.input-field input.valid~i,
 .input-field input:focus~i {
     height: 100%;
 }
@@ -90,7 +119,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
 }
 
 .to-do .todo-input button {
@@ -210,6 +238,9 @@
 
 .todos ul li .todo-listItem .todo {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     word-wrap: break-word;
     word-break: break-all;
     padding-right: 20px;
@@ -229,12 +260,13 @@
 }
 
 .todos ul li .todo-listItem .todo .title .titleEdit {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 .todos ul li .todo-listItem .todo .description {
     margin-top: 5px;
+    font-size: 1rem;
 }
 
 .todos ul li .todo-listItem .todo .description .descriptionEdit {
@@ -296,6 +328,7 @@
 @media only screen and (max-width: 740px) {
     .to-do {
         width: 100%;
+        min-width: 250px;
         padding: 40px 10px 10px 10px;
         border-radius: 10px;
     }
@@ -304,14 +337,22 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        /* row-gap: 40px; */
+    }
+
+    .to-do .todo-input .input-field .addDescButton {
+        margin-top: 20px;
+    }
+
+    .to-do .todo-input .input-field .input-section.description {
+        margin-top: 40px;
     }
 
     .to-do .todo-input input {
         width: 100%;
     }
 
-    .input-field input:valid~span,
+    .input-field input.valid~span,
     .input-field input:focus~span {
         color: white;
         transform: translateX(0px) translateY(-40px);
@@ -320,5 +361,21 @@
 
     .to-do .todo-input button {
         height: 100px;
+    }
+
+    .todos ul li .todo-listItem .todo .title {
+        font-size: 1rem;
+    }
+
+    .todos ul li .todo-listItem .todo .title .titleEdit {
+        font-size: 1rem;
+    }
+
+    .todos ul li .todo-listItem .todo .description {
+        font-size: 1rem;
+    }
+
+    .todos ul li .todo-listItem .todo .description .descriptionEdit {
+        font-size: 1rem;
     }
 }
