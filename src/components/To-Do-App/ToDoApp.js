@@ -7,6 +7,7 @@ import { FaEdit } from "react-icons/fa";
 import { FaSave } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaCircleXmark } from "react-icons/fa6";
+import { IoCloseCircle } from "react-icons/io5";
 
 const ToDoApp = () => {
   const [todo, setTodo] = useState(JSON.parse(localStorage.getItem("to-dos")) || []);
@@ -202,11 +203,15 @@ const ToDoApp = () => {
     setDescAddMode(true);
   }
 
+  const descRemoveModeHandler = () => {
+    setDescAddMode(false);
+  }
+
   return (
     <>
       <div className="to-do-main">
         <div className="to-do">
-          <form className={`todo-input ${ descAddMode ? `descAddMode` : `` }`} onSubmit={(e) => submitHandler(e)}>
+          <form className={`todo-input ${descAddMode ? `descAddMode` : ``}`} onSubmit={(e) => submitHandler(e)}>
             <div className="input-field">
               <div className="title input-section">
                 <input type="text" className={`titleInput ${title !== '' ? `valid` : ''}`} value={title} onChange={(e) => handleTitle(e)} required={true} />
@@ -217,14 +222,17 @@ const ToDoApp = () => {
                 descAddMode ?
                   <div className="description input-section">
                     <input type="text" className={`descInput ${description !== '' ? `valid` : ''}`} value={description} onChange={(e) => handleDescription(e)} required={false} />
+                    <div className="removeDescButtonWrapper">
+                      <div className="removeDescButton" onClick={descRemoveModeHandler}><IoCloseCircle /></div>
+                    </div>
                     <span>Description</span>
                     <i></i>
                   </div>
                   :
                   <>
-                  <div className="addDescButton" onClick={descAddModeHandler}>
-                    Add Description
-                  </div>
+                    <div className="addDescButton" onClick={descAddModeHandler}>
+                      Add Description
+                    </div>
                   </>
               }
             </div>

@@ -53,6 +53,39 @@
     background-color: rgb(73, 113, 153);
 }
 
+.to-do .todo-input .input-field .removeDescButtonWrapper {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 100%;
+    /* width: fit-content; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.to-do .todo-input .input-field .description .removeDescButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    /* color: rgb(213, 84, 84); */
+    color: azure;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    /* background-color: lightslategray; */
+    background-color: rgb(226, 69, 69);
+    z-index: 20;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.to-do .todo-input .input-field .description .removeDescButton:hover {
+    background-color: rgb(230, 30, 30);
+}
+
 .to-do .todo-input input {
     width: 100%;
     height: 50px;
@@ -62,10 +95,13 @@
     border: none;
     background-color: transparent;
     box-sizing: border-box;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 10px;
     z-index: 10;
 }
 
+.to-do .todo-input .description input {
+    padding: 0px 50px 0px 10px;
+}
 
 .input-field span {
     width: fit-content;
@@ -360,7 +396,7 @@
     }
 
     .to-do .todo-input button {
-        height: 100px;
+        /* height: 100px; */
     }
 
     .todos ul li .todo-listItem .todo .title {
