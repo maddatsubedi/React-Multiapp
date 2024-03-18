@@ -206,7 +206,7 @@ const ToDoApp = () => {
     <>
       <div className="to-do-main">
         <div className="to-do">
-          <form className={`descAddMode ${ descAddMode ? `descAddMode` : `` }`} onSubmit={(e) => submitHandler(e)}>
+          <form className={`todo-input ${ descAddMode ? `descAddMode` : `` }`} onSubmit={(e) => submitHandler(e)}>
             <div className="input-field">
               <div className="title input-section">
                 <input type="text" className={`titleInput ${title !== '' ? `valid` : ''}`} value={title} onChange={(e) => handleTitle(e)} required={true} />
