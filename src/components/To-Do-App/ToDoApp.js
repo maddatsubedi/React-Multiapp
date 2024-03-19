@@ -63,7 +63,7 @@ const ToDoApp = () => {
                     {
                       todo.description ?
                         <div className="description">
-                          <input ref={descriptionEditRef} name='descriptionEdit' defaultValue={todo.description} className='descriptionEdit' type="text" required={true} />
+                          <input ref={descriptionEditRef} name='descriptionEdit' defaultValue={todo.description} className='descriptionEdit' type="text" required={false} />
                         </div>
                         :
                         <></>
@@ -222,9 +222,7 @@ const ToDoApp = () => {
                 descAddMode ?
                   <div className="description input-section">
                     <input type="text" className={`descInput ${description !== '' ? `valid` : ''}`} value={description} onChange={(e) => handleDescription(e)} required={false} />
-                    <div className="removeDescButtonWrapper">
-                      <div className="removeDescButton" onClick={descRemoveModeHandler}><IoCloseCircle /></div>
-                    </div>
+                    <div className="removeDescButton" onClick={descRemoveModeHandler}><IoCloseCircle /></div>
                     <span>Description</span>
                     <i></i>
                   </div>

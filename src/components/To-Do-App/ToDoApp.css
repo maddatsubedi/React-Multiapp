@@ -53,37 +53,41 @@
     background-color: rgb(73, 113, 153);
 }
 
-.to-do .todo-input .input-field .removeDescButtonWrapper {
+.to-do .todo-input .input-field .description .removeDescButton {
     position: absolute;
     top: 0px;
-    right: 10px;
+    right: 0px;
     height: 100%;
-    /* width: fit-content; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
-}
-
-.to-do .todo-input .input-field .description .removeDescButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    /* color: rgb(213, 84, 84); */
-    color: azure;
+    font-size: 1.25rem;
+    color: lightslategray;
     box-sizing: border-box;
     padding: 5px;
-    border-radius: 10px;
-    /* background-color: lightslategray; */
-    background-color: rgb(226, 69, 69);
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
     z-index: 20;
     transition: 0.25s;
     cursor: pointer;
+    opacity: 0.5;
+}
+
+.to-do .todo-input .input-field .description input.valid~.removeDescButton,
+.to-do .todo-input .input-field .description input:focus~.removeDescButton {
+    color: white;
+    background-color: lightslategray;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.to-do .todo-input .input-field .description input.valid~.removeDescButton:hover,
+.to-do .todo-input .input-field .description input:focus~.removeDescButton:hover {
+    background-color: rgb(73, 113, 153);
 }
 
 .to-do .todo-input .input-field .description .removeDescButton:hover {
-    background-color: rgb(230, 30, 30);
+    color: white;
+    background-color: rgb(73, 113, 153);
 }
 
 .to-do .todo-input input {
@@ -100,7 +104,7 @@
 }
 
 .to-do .todo-input .description input {
-    padding: 0px 50px 0px 10px;
+    padding: 0px 40px 0px 10px;
 }
 
 .input-field span {
