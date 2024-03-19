@@ -19,6 +19,8 @@ const ToDoApp = () => {
   const titleEditRef = useRef(null); // Ref for title input
   const descriptionEditRef = useRef(null); // Ref for description input
 
+  const [showAll, setShowAll] = useState(true);
+
   useEffect(() => {
     localStorage.setItem("to-dos", JSON.stringify(todo.map(({ editMode, ...rest }) => rest)));
   }, [todo]);
@@ -40,6 +42,10 @@ const ToDoApp = () => {
 
     if (todo.isCompleted) {
       todoItemClassNames += ' isCompleted';
+    }
+
+    if (todo.isCompleted && !showAll) {
+      return null;
     }
 
     return (
@@ -202,6 +208,10 @@ const ToDoApp = () => {
     setDescAddMode(false);
   }
 
+  const showAllHandler = (event) => {
+    setShowAll(event.target.checked);
+  }
+
   return (
     <>
       <div className="to-do-main">
@@ -238,7 +248,19 @@ const ToDoApp = () => {
           <div className="line"></div>
           <div className="todos">
             <div className="todos-text">
-              My todos
+              <div className="text">My todos</div>
+              <div className="checkbox">
+                <div className="checkbox-line"></div>
+                <div className="checkbox-text">
+                  Show all
+                </div>
+                <div className="checkbox__1">
+                  <input id="checkbox-1" type="checkbox" defaultChecked={true} onChange={(event) => showAllHandler(event)}/>
+                  <label htmlFor="checkbox-1">
+                    <i className="material-icons">done</i>
+                  </label>
+                </div>
+              </div>
             </div>
             {toDos.length !== 0 ?
               <ul>
