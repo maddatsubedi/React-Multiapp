@@ -162,6 +162,7 @@
 
 .to-do .todo-input button {
     height: 100%;
+    max-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,10 +397,6 @@
         color: white;
         transform: translateX(0px) translateY(-40px);
         font-size: 0.85em;
-    }
-
-    .to-do .todo-input button {
-        /* height: 100px; */
     }
 
     .todos ul li .todo-listItem .todo .title {
