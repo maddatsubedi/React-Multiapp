@@ -70,7 +70,6 @@
     z-index: 20;
     transition: 0.25s;
     cursor: pointer;
-    opacity: 0.5;
 }
 
 .to-do .todo-input .input-field .description input.valid~.removeDescButton,

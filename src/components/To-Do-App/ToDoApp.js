@@ -58,16 +58,11 @@ const ToDoApp = () => {
                 <form className="todoEditForm" onSubmit={(e) => editSubmitHandler(e, index)}>
                   <div className="todo">
                     <div className="title">
-                      <input ref={titleEditRef} name='titleEdit' defaultValue={todo.title} className='titleEdit' type="text" required={true} />
+                      <input ref={titleEditRef} name='titleEdit' defaultValue={todo.title} className='titleEdit' placeholder='title' type="text" required={true} />
                     </div>
-                    {
-                      todo.description ?
-                        <div className="description">
-                          <input ref={descriptionEditRef} name='descriptionEdit' defaultValue={todo.description} className='descriptionEdit' type="text" required={false} />
-                        </div>
-                        :
-                        <></>
-                    }
+                    <div className="description">
+                      <input ref={descriptionEditRef} name='descriptionEdit' defaultValue={todo.description} className='descriptionEdit' placeholder='description' type="text" required={false} />
+                    </div>
                   </div>
                   <div className="todo-button">
                     <button type='submit' className='submit'><FaSave /></button>
