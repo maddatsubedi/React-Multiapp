@@ -15,7 +15,7 @@ Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
 ## How to Use
 
 1. Visit the live demo link provided above.
-2. You will see a navigation menu with options to switch between the Calculator and TodoApp.
+2. You will see a navigation menu with options to switch between different apps.
 3. Click on the respective app name to view and use the app.
 
 ## Features
