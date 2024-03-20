@@ -31,6 +31,8 @@ Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
 - Delete tasks from the list.
 - Simple and intuitive user interface.
 
+**Hosted individually on GitHub: [TodoApp GitHub Repo](https://github.com/ritoncharlox/React-ToDo-App)**
+
 <h3>
 <span> Calculator </span>
 <img align=center src="./public/calculator.png" alt="" width="30" height="30">
@@ -39,6 +41,8 @@ Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
 - Perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 - Clear the input field and start a new calculation.
 - Dynamic evaluation of expressions.
+
+**Hosted individually on GitHub: [Calculator App GitHub Repo](https://github.com/ritoncharlox/React-Calculator)**
 
 ## Technologies Used
 
