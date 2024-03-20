@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <main className="main">
           <Routes>
-            <Route path='/' element={<Calculator />} />
+            <Route path='/' element={<ToDoApp />} />
             <Route path='/calculator' element={<Calculator />} />
             <Route path='/todoapp' element={<ToDoApp />} />
           </Routes>

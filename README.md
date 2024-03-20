@@ -58,11 +58,11 @@ To run this project locally, follow these steps:
 
 - Clone this repository:
 ```
-git clone https://github.com/your-username/react-multiapp.git
+https://github.com/ritoncharlox/React-Multiapp.git
 ```
 - Access the cloned directory:
 ```
-cd react-multiapp
+cd React-Multiapp
 ```
 - Install dependencies:
 ```

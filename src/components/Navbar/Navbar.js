@@ -7,7 +7,7 @@ const NavItem = ({ to, children }) => {
   const isActive = useMatch({ path : resolvedPath.pathname, end : true });
   const isHome = useMatch({ path : '/', end : true });
   return (
-    <li className={`nav-item ${isActive ? `active` : isHome ? to === '/calculator' ? `active` : `` : ``}`}>
+    <li className={`nav-item ${isActive ? `active` : isHome ? to === '/todoapp' ? `active` : `` : ``}`}>
       <NavLink to={to}>{children}</NavLink>
     </li>
   );
@@ -18,8 +18,8 @@ const Navbar = () => {
     <>
       <nav className='navbar'>
         <ul>
-          <NavItem to="/calculator">Calculator</NavItem>
           <NavItem to="/todoapp">To Do App</NavItem>
+          <NavItem to="/calculator">Calculator</NavItem>
         </ul>
       </nav>
     </>
