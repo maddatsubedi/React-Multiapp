@@ -1,7 +1,7 @@
 <br>
-<h1 align=middle>
+<h1 align=center>
 <span> React MultiApp </span>
-<img align=center src="./public/favicon.png" alt="" width="40" height="40">
+<img align="center" src="./public/favicon.png" alt="" width="50" height="50">
 </h1>
 
 **This is a React MultiApp that serves as a container for multiple smaller React applications. It currently includes a Calculator and TodoApp, but you can easily extend it by adding more React apps.**
@@ -20,9 +20,9 @@ Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
 
 ## Features
 
-<h3 style="display: flex; align-items: center; column-gap: 10px">
-<div> ToDo App </div>
-<img src="./public/todoapp.png" alt="" width="30" height="30">
+<h3>
+<span> ToDo App </span>
+<img align=center src="./public/todoapp.png" alt="" width="30" height="30">
 </h3>
 
 - Add new tasks to the list.
@@ -31,9 +31,9 @@ Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
 - Delete tasks from the list.
 - Simple and intuitive user interface.
 
-<h3 style="display: flex; align-items: center; column-gap: 10px">
-<div> Calculator </div>
-<img src="./public/calculator.png" alt="" width="30" height="30">
+<h3>
+<span> Calculator </span>
+<img align=center src="./public/calculator.png" alt="" width="30" height="30">
 </h3>
 
 - Perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
