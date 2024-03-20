@@ -1,7 +1,7 @@
 <br>
 <h1 style="display: flex; justify-content: center; align-items: center; column-gap: 10px">
 <span> React MultiApp </span>
-<a style="display: flex;">
+<a href="/ritoncharlox/React-Multiapp/blob/master/public/favicon.png" style="display: flex;">
 <img src="./public/favicon.png" alt="" width="40" height="40">
 <a>
 </h1>
