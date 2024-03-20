@@ -1,6 +1,6 @@
 <br>
 <h1 style="display: flex; justify-content: center; align-items: center; column-gap: 10px">
-<div> React MultiApp </div>
+<span> React MultiApp </span>
 <img src="./public/favicon.png" alt="" width="40" height="40">
 </h1>
 
