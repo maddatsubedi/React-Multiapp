@@ -1,7 +1,7 @@
 <br>
 <h1 align=middle>
 <span> React MultiApp </span>
-<img align=middle src="./public/favicon.png" alt="" width="40" height="40">
+<img align=center src="./public/favicon.png" alt="" width="40" height="40">
 </h1>
 
 **This is a React MultiApp that serves as a container for multiple smaller React applications. It currently includes a Calculator and TodoApp, but you can easily extend it by adding more React apps.**
