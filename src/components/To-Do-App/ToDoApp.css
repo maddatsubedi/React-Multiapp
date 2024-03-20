@@ -199,15 +199,17 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
     column-gap: 20px;
     background-color: #efeeee;
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
+}
+
+.todos.haveTodos .todos-text {
+    justify-content: space-between;
 }
 
 .todos .todos-text .text {
@@ -217,7 +219,7 @@
     text-align: center;
     font-size: 1.4rem;
     font-weight: 600;
-    color: rgb(132, 99, 209);
+    color: rgb(78, 77, 77);
 }
 
 .todos .todos-text .checkbox {
@@ -230,7 +232,7 @@
 .todos .todos-text .checkbox-line {
     width: 2px;
     border-radius: 20px;
-    background-color: gray;
+    background-color: rgb(78, 77, 77);
 }
 
 .todos .todos-text .checkbox .checkbox-text {
@@ -239,7 +241,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgb(132, 99, 209);
+    color: rgb(78, 77, 77);
 }
 
 .todos .todos-text .checkbox input {
@@ -264,11 +266,11 @@
 }
 
 .todos .todos-text .checkbox .checkbox__1 label:hover i {
-    color: #6d5dfc;
+    transform: scale(1.1);
 }
 
 .todos .todos-text .checkbox .checkbox__1 label i {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #9baacf;
     transition: 0.3s ease;

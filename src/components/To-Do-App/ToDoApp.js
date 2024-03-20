@@ -246,26 +246,32 @@ const ToDoApp = () => {
             </div>
           </form>
           <div className="line"></div>
-          <div className="todos">
+          <div className={`todos ${ todo.length !== 0 ? `haveTodos` : `` }`}>
             <div className="todos-text">
               <div className="text">My todos</div>
-              <div className="checkbox">
-                <div className="checkbox-line"></div>
-                <div className="checkbox-text">
-                  Show all
-                </div>
-                <div className="checkbox__1">
-                  <input id="checkbox-1" type="checkbox" defaultChecked={true} onChange={(event) => showAllHandler(event)}/>
-                  <label htmlFor="checkbox-1">
-                    <i className="material-icons">done</i>
-                  </label>
-                </div>
-              </div>
+              {
+                todo.length !== 0 ?
+                  <div className="checkbox">
+                    <div className="checkbox-line"></div>
+                    <div className="checkbox-text">
+                      Show all
+                    </div>
+                    <div className="checkbox__1">
+                      <input id="checkbox-1" type="checkbox" defaultChecked={true} onChange={(event) => showAllHandler(event)} />
+                      <label htmlFor="checkbox-1">
+                        <i className="material-icons">done</i>
+                      </label>
+                    </div>
+                  </div>
+                  :
+                  <></>
+              }
             </div>
             {toDos.length !== 0 ?
               <ul>
                 {toDos}
-              </ul> :
+              </ul>
+              :
               noToDos}
           </div>
         </div>
