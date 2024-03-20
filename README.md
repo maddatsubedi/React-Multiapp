@@ -1,9 +1,7 @@
 <br>
-<h1 style="display: flex; justify-content: center; align-items: center; column-gap: 10px">
+<h1 align=middle>
 <span> React MultiApp </span>
-<a href="/ritoncharlox/React-Multiapp/blob/master/public/favicon.png" style="display: flex;">
-<img src="./public/favicon.png" alt="" width="40" height="40">
-<a>
+<img align=middle src="./public/favicon.png" alt="" width="40" height="40">
 </h1>
 
 **This is a React MultiApp that serves as a container for multiple smaller React applications. It currently includes a Calculator and TodoApp, but you can easily extend it by adding more React apps.**
