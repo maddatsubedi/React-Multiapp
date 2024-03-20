@@ -248,7 +248,7 @@ const ToDoApp = () => {
           <div className="line"></div>
           <div className={`todos ${ todo.length !== 0 ? `haveTodos` : `` }`}>
             <div className="todos-text">
-              <div className="text">My todos</div>
+              <div className="text">My Todos</div>
               {
                 todo.length !== 0 ?
                   <div className="checkbox">
