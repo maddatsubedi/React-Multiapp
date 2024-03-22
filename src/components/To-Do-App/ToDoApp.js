@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useRef, useState } from 'react';
+import { useNotifications } from '../Notification/NotificationsContext';
 import './ToDoApp.css';
 import { MdDelete } from "react-icons/md";
 import { FaPlusCircle } from "react-icons/fa";
@@ -20,6 +21,8 @@ const ToDoApp = () => {
   const descriptionEditRef = useRef(null); // Ref for description input
 
   const [showAll, setShowAll] = useState(true);
+
+  const { addNotification } = useNotifications();
 
   useEffect(() => {
     localStorage.setItem("to-dos", JSON.stringify(todo.map(({ editMode, ...rest }) => rest)));
@@ -120,6 +123,24 @@ const ToDoApp = () => {
     });
     setTitle('');
     setDescription('');
+    addNotification(
+      {
+        // title: "todo",
+        // description: "Description",
+        text: "New Task Added",
+        status: "success",
+        // background: "purple",
+        // color: "",
+        // icon: "asdf",
+        // duration : '2s',
+        // iconColor: "red",
+        // titleColor: "",
+        // textColor: "",
+        // descriptionColor: "",
+        // fixed: true,
+        // progressColor: "",
+      }
+    );
   }
 
   const handleTitle = (e) => {
@@ -137,6 +158,13 @@ const ToDoApp = () => {
       newTodo.splice(index, 1);
       return (newTodo);
     });
+    addNotification(
+      {
+        text: "Task Removed",
+        status: "success",
+        background: "#bf0000",
+      }
+    );
   }
 
   const editHandler = (index) => {
@@ -178,6 +206,13 @@ const ToDoApp = () => {
       // console.log("Hello");
       return (newTodo);
     });
+    addNotification(
+      {
+        text: "Task updated",
+        status: "success",
+        background: "green",
+      }
+    );
   }
 
   const handleComplete = (index) => {
@@ -185,6 +220,13 @@ const ToDoApp = () => {
     if (todoItem.editMode) {
       return;
     }
+    addNotification(
+      {
+        text: `${todoItem.isCompleted ? `Task marked as incomplete` : `Task completed`}`,
+        status: "success",
+        background: "purple",
+      }
+    );
     setTodo((prevTodo) => {
       const newTodo = prevTodo.map((todo, indx) => {
         if (index === indx) {
@@ -246,7 +288,7 @@ const ToDoApp = () => {
             </div>
           </form>
           <div className="line"></div>
-          <div className={`todos ${ todo.length !== 0 ? `haveTodos` : `` }`}>
+          <div className={`todos ${todo.length !== 0 ? `haveTodos` : ``}`}>
             <div className="todos-text">
               <div className="text">My Todos</div>
               {
