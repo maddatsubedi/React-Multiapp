@@ -1,0 +1,204 @@
+.notificationPage-main {
+    display: flex;
+    justify-content: center;
+}
+
+.notificationPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 10px; */
+    /* background-color: lightgray; */
+    border-radius: 10px;
+    color: rgb(70, 70, 70);
+}
+
+.notificationPage .info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.notificationPage .info .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    /* background-color: red; */
+}
+
+.notificationPage .info .header .header-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.notificationPage .info .header .header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: darkslategray;
+}
+
+.notificationPage .info .description {
+    /* font-size: 1.1rem; */
+    font-weight: 600;
+    text-align: center;
+}
+
+.notificationPage .info .github {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: gray;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.notificationPage .info .github .text {
+    font-size: 1rem;
+}
+
+.notificationPage .info .github .github-link {
+    /* width: fit-content; */
+    display: flex;
+    flex-direction: row;
+    /* column-gap: 10px; */
+    border-radius: 10px;
+    /* background-color: gray; */
+    /* padding: 0px 10px; */
+}
+
+.notificationPage .info .github .github-link .icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgb(50, 50, 50);
+    max-width: 50px;
+}
+
+.notificationPage .info .github .github-link a {
+    width: 100%;
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px 10px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+    transition: 0.25s;
+}
+
+.notificationPage .info .github .github-link a:hover {
+    color: blue;
+}
+
+.notificationPage .info .github .github-link-info {
+    font-size: 1rem;
+}
+
+.notificationPage .demo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin-top: 50px;
+}
+
+.notificationPage .demo .header {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    /* background-color: blue; */
+}
+
+.notificationPage .demo .demo-section {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    row-gap: 50px;
+}
+
+.notificationPage .demo .demo-section .demos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.notificationPage .demo .demo-section .notification-section {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.notificationPage .demo .demo-section .notification-section .notification-info {
+    text-align: center;
+    font-weight: 600;
+}
+
+.notificationPage .demo .demo-section .notification-section code.language-javascript.hljs {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.notificationPage .demo .demo-section .notification-section .hljs-title.function_ {
+    color: purple;
+}
+
+.notificationPage .demo .demo-section .notification-section .hljs-string {
+    color: #0000e6;
+}
+
+.notificationPage .demo .demo-section .notification-section .hljs-literal {
+    color: #0000e6;
+}
+
+.notificationPage .demo .demo-section .notification-section .button {
+    display: flex;
+    /* background-color: red; */
+}
+
+.notificationPage .demo .demo-section .notification-section .button button {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(72 35 7);
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    box-shadow: 0 0 #0000, 0 0 #0000, -6px 8px 10px rgba(81, 41, 10, .1), 0px 2px 2px rgba(81, 41, 10, .2);
+    cursor: pointer;
+}
+
+.notificationPage .demo .demo-section .demo-info {
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: gray;
+}
+
+.notificationPage .demo .demo-section .demo-info .demo-info-github-link {
+    text-decoration: none;
+    color: purple;
+}

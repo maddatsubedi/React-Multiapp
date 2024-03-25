@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNotifications } from './NotificationsContext';
+import { useNotifications } from './NotificationContext';
 
 import './Notification.css';
 import { FaCheckCircle } from "react-icons/fa";
@@ -71,7 +71,7 @@ const Notification = ({ position }) => {
             }
           >
             {
-              notifications.map((notice, index) => {
+              notifications.map((notice) => {
                 return (
                   <div key={notice.id} className={`notification ${notice.status ? `notificationStatus-${notice.status}` : ``}`}
                     style={
@@ -85,6 +85,9 @@ const Notification = ({ position }) => {
                           paddingRight: '10px',
                           paddingBottom: '10px',
                           paddingLeft: '10px',
+                        } : {}),
+                        ...(!noticeInfos[notice.status] && !notice.icon ? {
+                          paddingLeft: '15px',
                         } : {})
                       }
                     }
@@ -113,7 +116,7 @@ const Notification = ({ position }) => {
                               <div className="title"
                                 style={
                                   {
-                                    color: notice.titleColor
+                                    color: notice.titleColor || notice.textsColor
                                   }
                                 }
                               >
@@ -127,7 +130,7 @@ const Notification = ({ position }) => {
                               <div className="notification-text"
                                 style={
                                   {
-                                    color: notice.textColor
+                                    color: notice.textColor || notice.textsColor
                                   }
                                 }
                               >
@@ -141,7 +144,7 @@ const Notification = ({ position }) => {
                               <div className="description"
                                 style={
                                   {
-                                    color: notice.descriptionColor
+                                    color: notice.descriptionColor || notice.textsColor
                                   }
                                 }
                               >
@@ -154,7 +157,7 @@ const Notification = ({ position }) => {
                         :
                         <></>
                     }
-                    <div className="button">
+                    <div className={`button ${notice.closeButtonRotate === true ? `rotateOnHover` : ``}`}>
                       <button onClick={() => noticeDelHandler(notice.id)}>
                         <FaXmark />
                       </button>

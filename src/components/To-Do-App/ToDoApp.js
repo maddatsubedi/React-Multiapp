@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useRef, useState } from 'react';
-import { useNotifications } from '../Notification/NotificationsContext';
+import { useNotifications } from '../Notification/NotificationContext';
 import './ToDoApp.css';
 import { MdDelete } from "react-icons/md";
 import { FaPlusCircle } from "react-icons/fa";
@@ -74,8 +74,8 @@ const ToDoApp = () => {
                     </div>
                   </div>
                   <div className="todo-button">
-                    <button type='submit' className='submit'><FaSave /></button>
-                    <button className='delete' onClick={(e) => deleteHandler(e, index)}><MdDelete /></button>
+                    <button type='submit' aria-label="submit todo task edit" className='submit'><FaSave /></button>
+                    <button className='delete' aria-label="delete todo task" onClick={(e) => deleteHandler(e, index)}><MdDelete /></button>
                   </div>
                 </form>
               </> :
@@ -96,8 +96,8 @@ const ToDoApp = () => {
                   }
                 </div>
                 <div className="todo-button">
-                  <button className='edit' onClick={() => editHandler(index)}><FaEdit /></button>
-                  <button className='delete' onClick={(e) => deleteHandler(e, index)}><MdDelete /></button>
+                  <button className='edit' aria-label="edit todo task" onClick={() => editHandler(index)}><FaEdit /></button>
+                  <button className='delete' aria-label="delete todo task" onClick={(e) => deleteHandler(e, index)}><MdDelete /></button>
                 </div>
               </>
           }
@@ -125,20 +125,8 @@ const ToDoApp = () => {
     setDescription('');
     addNotification(
       {
-        // title: "todo",
-        // description: "Description",
         text: "New Task Added",
         status: "success",
-        // background: "purple",
-        // color: "",
-        // icon: "asdf",
-        // duration : '2s',
-        // iconColor: "red",
-        // titleColor: "",
-        // textColor: "",
-        // descriptionColor: "",
-        // fixed: true,
-        // progressColor: "",
       }
     );
   }
@@ -282,7 +270,7 @@ const ToDoApp = () => {
               }
             </div>
             <div className="button">
-              <button type='submit'>
+              <button type='submit' aria-label="submit">
                 <FaPlusCircle size={25} />
               </button>
             </div>

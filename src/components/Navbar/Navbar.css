@@ -12,8 +12,11 @@
 .navbar ul {
     width: fit-content;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     column-gap: 20px;
+    row-gap: 20px
+    ;
 }
 
 .navbar ul li {
@@ -26,6 +29,7 @@
     box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.1), -4px -4px 6px white;
     transition: color 0.2s ease-out, transform 0.2s ease-out;
     color: dimgray;
+    white-space: nowrap;
 }
 
 .navbar ul li:hover {
@@ -53,4 +57,18 @@
     padding: 10px;
     text-decoration: none;
     color: inherit;
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar ul {
+        column-gap: 15px;
+    }
+
+    .navbar ul li {
+        font-size: 1rem;
+    }
+
+    .navbar ul li a {
+        padding: 10px 8px;
+    }
 }

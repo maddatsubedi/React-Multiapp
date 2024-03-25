@@ -18,8 +18,9 @@ const Navbar = () => {
     <>
       <nav className='navbar'>
         <ul>
-          <NavItem to="/todoapp">To Do App</NavItem>
+          <NavItem to="/todoapp">To Do</NavItem>
           <NavItem to="/calculator">Calculator</NavItem>
+          <NavItem to="/notification">Notification</NavItem>
         </ul>
       </nav>
     </>

@@ -21,6 +21,17 @@ Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
 ## Features
 
 <h3>
+<span> React Notification </span>
+<img align=center src="./public/notification.png" alt="" width="30" height="30">
+</h3>
+
+- Easily add dynamic notifications to your React applications.
+- Customize notification appearance including text, status, background color, duration, and more.
+- Seamlessly integrate into your existing React projects.
+
+**Hosted individually on GitHub: [React Notification GitHub Repo](https://github.com/ritoncharlox/React-Notification)**
+
+<h3>
 <span> ToDo App </span>
 <img align=center src="./public/todoapp.png" alt="" width="30" height="30">
 </h3>
