@@ -68,8 +68,8 @@ Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
 To run this project locally, follow these steps:
 
 - Clone this repository:
-```
-https://github.com/ritoncharlox/React-Multiapp.git
+```bash
+git clone https://github.com/ritoncharlox/React-Multiapp.git
 ```
 - Access the cloned directory:
 ```
