@@ -10,7 +10,7 @@
 
 You can access the live demo of this React MultiApp on Netlify:
 <br>
-Netlify: [React MultiApp Demo](https://ritoncharlox-react-multiapp.netlify.app/)
+Netlify: [React MultiApp Demo](https://react-multiapp.netlify.app/)
 
 ## How to Use
 
