@@ -69,7 +69,7 @@ To run this project locally, follow these steps:
 
 - Clone this repository:
 ```bash
-git clone https://github.com/ritoncharlox/React-Multiapp.git
+git clone https://github.com/maddatsubedi/React-Multiapp.git
 ```
 - Access the cloned directory:
 ```
